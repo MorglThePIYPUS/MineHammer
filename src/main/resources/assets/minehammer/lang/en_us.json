@@ -1,4 +1,7 @@
 {
   "item.minehammer.adamantium_ingot": "Adamantium Ingot",
-  "item.minehammer.raw_adamantium": "Raw Adamantium"
+  "item.minehammer.raw_adamantium": "Raw Adamantium",
+
+  "block.minehammer.adamantium_ore": "Adamantium Ore",
+  "block.minehammer.raw_adamantium_block": "Block of Raw Adamantium"
 }

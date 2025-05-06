@@ -1,6 +1,7 @@
 package com.morglthepiypus.minehammer;
 
 import com.mojang.logging.LogUtils;
+import com.morglthepiypus.minehammer.block.ModBlocks;
 import com.morglthepiypus.minehammer.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -35,6 +36,7 @@ public class MineHammer
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -52,6 +54,11 @@ public class MineHammer
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ADAMANTIUM_INGOT);
             event.accept(ModItems.RAW_ADAMANTIUM);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ADAMANTIUM_ORE);
+            event.accept(ModBlocks.RAW_ADAMANTIUM_BLOCK);
         }
     }
 
