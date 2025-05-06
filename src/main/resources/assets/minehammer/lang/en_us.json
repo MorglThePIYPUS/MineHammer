@@ -3,5 +3,8 @@
   "item.minehammer.raw_adamantium": "Raw Adamantium",
 
   "block.minehammer.adamantium_ore": "Adamantium Ore",
-  "block.minehammer.raw_adamantium_block": "Block of Raw Adamantium"
+  "block.minehammer.raw_adamantium_block": "Block of Raw Adamantium",
+
+  "creativetab.minehammer.minehammer_items": "MineHammer Items",
+  "creativetab.minehammer.minehammer_blocks": "MineHammer Blocks"
 }
