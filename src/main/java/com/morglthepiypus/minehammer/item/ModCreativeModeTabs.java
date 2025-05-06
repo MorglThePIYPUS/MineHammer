@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.ADAMANTIUM_ORE.get());
                         output.accept(ModBlocks.RAW_ADAMANTIUM_BLOCK.get());
+                        output.accept(ModBlocks.ADAMANTIUM_BLOCK.get());
                     })
                     .build());
 

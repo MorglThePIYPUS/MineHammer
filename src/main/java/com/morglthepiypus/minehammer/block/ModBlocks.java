@@ -22,6 +22,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of().strength(6f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> RAW_ADAMANTIUM_BLOCK = registerBlock("raw_adamantium_block",
             () -> new Block(BlockBehaviour.Properties.of().strength(6f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ADAMANTIUM_BLOCK = registerBlock("adamantium_block",
+            () -> new Block(BlockBehaviour.Properties.of().strength(6f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
