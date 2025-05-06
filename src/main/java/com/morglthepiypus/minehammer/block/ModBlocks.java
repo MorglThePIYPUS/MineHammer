@@ -2,9 +2,11 @@ package com.morglthepiypus.minehammer.block;
 
 import com.morglthepiypus.minehammer.MineHammer;
 import com.morglthepiypus.minehammer.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -19,11 +21,26 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, MineHammer.MOD_ID);
 
     public static final RegistryObject<Block> ADAMANTIUM_ORE = registerBlock("adamantium_ore",
-            () -> new Block(BlockBehaviour.Properties.of().strength(6f).requiresCorrectToolForDrops()));
+            () -> new DropExperienceBlock(UniformInt.of(2, 4),
+                    BlockBehaviour.Properties.of()
+                            .strength(3f, 3f)
+                            .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DEEPSLATE_ADAMANTIUM_ORE = registerBlock("deepslate_adamantium_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 6),
+                    BlockBehaviour.Properties.of()
+                            .strength(4.5f, 3f)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.DEEPSLATE)));
+
     public static final RegistryObject<Block> RAW_ADAMANTIUM_BLOCK = registerBlock("raw_adamantium_block",
-            () -> new Block(BlockBehaviour.Properties.of().strength(6f).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(6f, 5f)
+                    .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ADAMANTIUM_BLOCK = registerBlock("adamantium_block",
-            () -> new Block(BlockBehaviour.Properties.of().strength(6f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(10f, 9f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

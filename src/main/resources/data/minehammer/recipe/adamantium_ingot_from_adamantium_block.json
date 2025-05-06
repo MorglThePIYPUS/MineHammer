@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "adamantium_ingot",
+  "ingredients": [
+    {
+      "item": "minehammer:adamantium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "minehammer:adamantium_ingot"
+  }
+}
