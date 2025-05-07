@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "minehammer:adamantium_block"
+    "minehammer:adamantium_block",
+    "minehammer:adamantium_ore",
+    "minehammer:deepslate_adamantium_ore"
   ]
 }

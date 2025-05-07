@@ -23,22 +23,22 @@ public class ModBlocks {
     public static final RegistryObject<Block> ADAMANTIUM_ORE = registerBlock("adamantium_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4),
                     BlockBehaviour.Properties.of()
-                            .strength(3f, 3f)
+                            .strength(30f, 1200f)
                             .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> DEEPSLATE_ADAMANTIUM_ORE = registerBlock("deepslate_adamantium_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 6),
                     BlockBehaviour.Properties.of()
-                            .strength(4.5f, 3f)
+                            .strength(40f, 1200f)
                             .requiresCorrectToolForDrops()
                             .sound(SoundType.DEEPSLATE)));
 
     public static final RegistryObject<Block> RAW_ADAMANTIUM_BLOCK = registerBlock("raw_adamantium_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(6f, 5f)
+                    .strength(15f, 1200f)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> ADAMANTIUM_BLOCK = registerBlock("adamantium_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(10f, 9f)
+                    .strength(50f, 1200f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.METAL)));
 
