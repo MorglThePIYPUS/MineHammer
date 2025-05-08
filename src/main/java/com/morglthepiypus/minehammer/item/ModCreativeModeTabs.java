@@ -21,6 +21,8 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.RAW_ADAMANTIUM.get());
                         output.accept(ModItems.ADAMANTIUM_INGOT.get());
+
+                        output.accept(ModItems.IMPERIUM_CHISEL.get());
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> MINEHAMMER_BLOCKS_TAB = CREATIVE_MODE_TABS.register("minehammer_blocks_tab",
