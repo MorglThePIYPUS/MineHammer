@@ -34,7 +34,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ADAMANTIUM_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_ADAMANTIUM_ORE.get());
                         output.accept(ModBlocks.RAW_ADAMANTIUM_BLOCK.get());
-                        output.accept(ModBlocks.ADAMANTIUM_BLOCK.get());
+                        output.accept(ModBlocks.ADAMANTIUM_BLOCK.get());;
+
+                        output.accept(ModBlocks.MAGIC_BLOCK.get());
                     })
                     .build());
 

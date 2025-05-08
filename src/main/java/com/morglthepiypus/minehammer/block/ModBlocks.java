@@ -1,6 +1,7 @@
 package com.morglthepiypus.minehammer.block;
 
 import com.morglthepiypus.minehammer.MineHammer;
+import com.morglthepiypus.minehammer.block.custom.MagicBlock;
 import com.morglthepiypus.minehammer.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -20,6 +21,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, MineHammer.MOD_ID);
 
+    /* ********** IMPERIUM ********** */
     public static final RegistryObject<Block> ADAMANTIUM_ORE = registerBlock("adamantium_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4),
                     BlockBehaviour.Properties.of()
@@ -41,6 +43,12 @@ public class ModBlocks {
                     .strength(50f, 1200f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.METAL)));
+
+    // Advanced
+    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock(
+            "magic_block",
+            () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
