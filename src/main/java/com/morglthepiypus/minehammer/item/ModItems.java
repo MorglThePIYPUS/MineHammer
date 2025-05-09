@@ -1,6 +1,7 @@
 package com.morglthepiypus.minehammer.item;
 
 import com.morglthepiypus.minehammer.MineHammer;
+import com.morglthepiypus.minehammer.item.custom.FuelItem;
 import com.morglthepiypus.minehammer.item.custom.ImperiumChiselItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -12,11 +13,22 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MineHammer.MOD_ID);
 
+    /* ********** GENERAL *********** */
+    // Food Items
+    public static final RegistryObject<Item> COOKED_TYRANID_TORAX =
+            ITEMS.register(
+                    "cooked_tyranid_torax",
+                    () -> new Item( new Item.Properties().food(ModFoodProperties.COOKED_TYRANID_TORAX)));
+
     /* ********** IMPERIUM ********** */
     public static final RegistryObject<Item> ADAMANTIUM_INGOT =
             ITEMS.register("adamantium_ingot", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_ADAMANTIUM =
             ITEMS.register("raw_adamantium", () -> new Item(new Item.Properties()));
+
+    // Fuel Items
+    public static final RegistryObject<Item> PROMETHIUM_BLOB =
+            ITEMS.register("promethium_blob", () -> new FuelItem(new Item.Properties(), 20000));
 
     // Advanced Items
     public static final RegistryObject<Item> IMPERIUM_CHISEL =
