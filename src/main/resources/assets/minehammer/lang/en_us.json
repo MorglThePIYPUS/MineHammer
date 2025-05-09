@@ -1,9 +1,12 @@
 {
+  "tooltip.minehammer.shift_for_more": "Press §eShift§r for more information",
   "item.minehammer.adamantium_ingot": "Adamantium Ingot",
   "item.minehammer.raw_adamantium": "Raw Adamantium",
   "item.minehammer.imperium_chisel": "Imperium Chisel",
+  "tooltip.minehammer.imperium_chisel.shift_down": "This item is a §eplaceholder§r",
   "item.minehammer.tyranid_torax": "Tyranid Torax",
   "item.minehammer.cooked_tyranid_torax": "Cooked Tyranid Torax",
+  "tooltip.minehammer.cooked_tyranid_torax": "25% chance of applying Regeneration for 20 seconds!",
   "item.minehammer.promethium_blob": "Promethium Blob",
 
   "block.minehammer.adamantium_ore": "Adamantium Ore",
@@ -11,6 +14,7 @@
   "block.minehammer.raw_adamantium_block": "Block of Raw Adamantium",
   "block.minehammer.adamantium_block": "Adamantium Block",
   "block.minehammer.magic_block": "Magic Block",
+  "tooltip.minehammer.magic_block.tooltip": "This block is a §eplaceholder§r",
 
   "creativetab.minehammer.minehammer_items": "MineHammer Items",
   "creativetab.minehammer.minehammer_blocks": "MineHammer Blocks"
