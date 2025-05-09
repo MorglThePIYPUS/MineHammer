@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 150,
+  "experience": 0.5,
+  "ingredient": {
+    "item": "minehammer:tyranid_torax"
+  },
+  "result": {
+    "id": "minehammer:cooked_tyranid_torax"
+  }
+}

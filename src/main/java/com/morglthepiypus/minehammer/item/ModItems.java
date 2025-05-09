@@ -15,6 +15,10 @@ public class ModItems {
 
     /* ********** GENERAL *********** */
     // Food Items
+    public static final RegistryObject<Item> TYRANID_TORAX =
+            ITEMS.register(
+                    "tyranid_torax",
+                    () -> new Item( new Item.Properties().food(ModFoodProperties.TYRANID_TORAX)));
     public static final RegistryObject<Item> COOKED_TYRANID_TORAX =
             ITEMS.register(
                     "cooked_tyranid_torax",

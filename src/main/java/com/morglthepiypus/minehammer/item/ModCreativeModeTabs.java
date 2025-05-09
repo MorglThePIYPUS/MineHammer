@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.RAW_ADAMANTIUM.get());
                         output.accept(ModItems.ADAMANTIUM_INGOT.get());
+                        output.accept(ModItems.TYRANID_TORAX.get());
                         output.accept(ModItems.COOKED_TYRANID_TORAX.get());
 
                         output.accept(ModItems.IMPERIUM_CHISEL.get());

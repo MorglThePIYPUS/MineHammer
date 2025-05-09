@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 900,
+  "experience": 0.5,
+  "ingredient": {
+    "item": "minehammer:tyranid_torax"
+  },
+  "result": {
+    "id": "minehammer:cooked_tyranid_torax"
+  }
+}
