@@ -50,10 +50,10 @@ public class ModItems {
             ITEMS.register("promethium_blob", () -> new FuelItem(new Item.Properties(), 20000));
 
     // Advanced Items
-    public static final RegistryObject<Item> IMPERIUM_CHISEL =
-            ITEMS.register(
-                    "imperium_chisel",
-                    () -> new ImperiumChiselItem(new Item.Properties().durability(32)));
+//    public static final RegistryObject<Item> IMPERIUM_CHISEL =
+//            ITEMS.register(
+//                    "imperium_chisel",
+//                    () -> new ImperiumChiselItem(new Item.Properties().durability(32)));
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

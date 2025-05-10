@@ -16,31 +16,42 @@ public class ModCreativeModeTabs {
 
     public static final RegistryObject<CreativeModeTab> MINEHAMMER_ITEMS_TAB = CREATIVE_MODE_TABS.register("minehammer_items_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.ADAMANTIUM_INGOT.get()))
+                    .icon(() -> new ItemStack(ModItems.TYRANID_TORAX.get()))
                     .title(Component.translatable("creativetab.minehammer.minehammer_items"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.RAW_ADAMANTIUM.get());
-                        output.accept(ModItems.ADAMANTIUM_INGOT.get());
                         output.accept(ModItems.TYRANID_TORAX.get());
                         output.accept(ModItems.COOKED_TYRANID_TORAX.get());
-
-                        output.accept(ModItems.IMPERIUM_CHISEL.get());
-
-                        output.accept(ModItems.PROMETHIUM_BLOB.get());
                     })
                     .build());
-    public static final RegistryObject<CreativeModeTab> MINEHAMMER_BLOCKS_TAB = CREATIVE_MODE_TABS.register("minehammer_blocks_tab",
+    public static final RegistryObject<CreativeModeTab> MINEHAMMER_IMPERIUM_ITEMS_TAB =
+            CREATIVE_MODE_TABS.register(
+                    "imperium_items_tab",
+                    () -> CreativeModeTab.builder()
+                        .icon(() -> new ItemStack(ModItems.ADAMANTIUM_INGOT.get()))
+                            .withTabsBefore(MINEHAMMER_ITEMS_TAB.getId())
+                        .title(Component.translatable("creativetab.minehammer.minehammer_imperium_items"))
+                        .displayItems((itemDisplayParameters, output) -> {
+                            output.accept(ModItems.RAW_ADAMANTIUM.get());
+                            output.accept(ModItems.ADAMANTIUM_INGOT.get());
+
+                            //output.accept(ModItems.IMPERIUM_CHISEL.get());
+
+                            output.accept(ModItems.PROMETHIUM_BLOB.get());
+                        })
+                    .build());
+    public static final RegistryObject<CreativeModeTab> MINEHAMMER_BLOCKS_TAB = CREATIVE_MODE_TABS.register(
+            "imperium_blocks_tab",
             () -> CreativeModeTab.builder()
                     .icon(() -> new ItemStack(ModBlocks.ADAMANTIUM_ORE.get()))
-                    .withTabsBefore(MINEHAMMER_ITEMS_TAB.getId())
-                    .title(Component.translatable("creativetab.minehammer.minehammer_blocks"))
+                    .withTabsBefore(MINEHAMMER_IMPERIUM_ITEMS_TAB.getId())
+                    .title(Component.translatable("creativetab.minehammer.imperium_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.ADAMANTIUM_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_ADAMANTIUM_ORE.get());
                         output.accept(ModBlocks.RAW_ADAMANTIUM_BLOCK.get());
-                        output.accept(ModBlocks.ADAMANTIUM_BLOCK.get());;
+                        output.accept(ModBlocks.ADAMANTIUM_BLOCK.get());
 
-                        output.accept(ModBlocks.MAGIC_BLOCK.get());
+                        //output.accept(ModBlocks.MAGIC_BLOCK.get());
                     })
                     .build());
 

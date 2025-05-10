@@ -45,9 +45,9 @@ public class ModBlocks {
                     .sound(SoundType.METAL)));
 
     // Advanced
-    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock(
-            "magic_block",
-            () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+//    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock(
+//            "magic_block",
+//            () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
