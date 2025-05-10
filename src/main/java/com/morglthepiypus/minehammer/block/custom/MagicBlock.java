@@ -1,6 +1,7 @@
 package com.morglthepiypus.minehammer.block.custom;
 
 import com.morglthepiypus.minehammer.item.ModItems;
+import com.morglthepiypus.minehammer.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
@@ -36,11 +37,15 @@ public class MagicBlock extends Block {
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
         if(pEntity instanceof ItemEntity itemEntity) {
-            if(itemEntity.getItem().getItem() == Items.NETHERITE_INGOT) {
+            if(isValidItem(itemEntity.getItem())) {
                 itemEntity.setItem(new ItemStack(ModItems.ADAMANTIUM_INGOT.get(), itemEntity.getItem().getCount()));
             }
         }
         super.stepOn(pLevel, pPos, pState, pEntity);
+    }
+
+    private boolean isValidItem(ItemStack item) {
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     @Override
