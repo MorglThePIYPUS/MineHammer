@@ -44,6 +44,21 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.RAW_ADAMANTIUM_BLOCK.get());
         dropSelf(ModBlocks.ADAMANTIUM_BLOCK.get());
+
+        dropSelf(ModBlocks.ADAMANTIUM_STAIRS.get());
+        this.add(ModBlocks.ADAMANTIUM_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ADAMANTIUM_SLAB.get()));
+
+        dropSelf(ModBlocks.ADAMANTIUM_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.ADAMANTIUM_BUTTON.get());
+
+        dropSelf(ModBlocks.ADAMANTIUM_FENCE.get());
+        dropSelf(ModBlocks.ADAMANTIUM_FENCE_GATE.get());
+        dropSelf(ModBlocks.ADAMANTIUM_WALL.get());
+
+        this.add(ModBlocks.ADAMANTIUM_DOOR.get(),
+                block -> createDoorTable(ModBlocks.ADAMANTIUM_DOOR.get()));
+        dropSelf(ModBlocks.ADAMANTIUM_TRAPDOOR.get());
     }
 
     protected LootTable.Builder createMultipleDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

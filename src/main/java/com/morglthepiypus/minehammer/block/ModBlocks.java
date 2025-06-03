@@ -1,15 +1,16 @@
 package com.morglthepiypus.minehammer.block;
 
 import com.morglthepiypus.minehammer.MineHammer;
+import com.morglthepiypus.minehammer.block.custom.ImperiumLampBlock;
 import com.morglthepiypus.minehammer.block.custom.MagicBlock;
 import com.morglthepiypus.minehammer.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -43,6 +44,54 @@ public class ModBlocks {
                     .strength(50f, 1200f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.METAL)));
+
+    public static final RegistryObject<StairBlock> ADAMANTIUM_STAIRS = registerBlock("adamantium_stairs",
+            () -> new StairBlock(ModBlocks.ADAMANTIUM_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of()
+                            .strength(50f, 1200f)
+                            .requiresCorrectToolForDrops()));
+    public static final RegistryObject<SlabBlock> ADAMANTIUM_SLAB = registerBlock("adamantium_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(50f, 1200f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<PressurePlateBlock> ADAMANTIUM_PRESSURE_PLATE = registerBlock("adamantium_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON,
+                    BlockBehaviour.Properties.of()
+                            .strength(50f, 1200f)
+                            .requiresCorrectToolForDrops()));
+    public static final RegistryObject<ButtonBlock> ADAMANTIUM_BUTTON = registerBlock("adamantium_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 10,
+                    BlockBehaviour.Properties.of()
+                            .strength(50f, 1200f)
+                            .requiresCorrectToolForDrops().noCollission()));
+
+    public static final RegistryObject<FenceBlock> ADAMANTIUM_FENCE = registerBlock("adamantium_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of()
+                            .strength(50f, 1200f)
+                            .requiresCorrectToolForDrops()));
+    public static final RegistryObject<FenceGateBlock> ADAMANTIUM_FENCE_GATE = registerBlock("adamantium_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA,
+                    BlockBehaviour.Properties.of()
+                            .strength(50f, 1200f)
+                            .requiresCorrectToolForDrops()));
+    public static final RegistryObject<WallBlock> ADAMANTIUM_WALL = registerBlock("adamantium_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of()
+                            .strength(50f, 1200f)
+                            .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<DoorBlock> ADAMANTIUM_DOOR = registerBlock("adamantium_door",
+            () -> new DoorBlock(BlockSetType.IRON,
+                    BlockBehaviour.Properties.of()
+                            .strength(50f, 1200f)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final RegistryObject<TrapDoorBlock> ADAMANTIUM_TRAPDOOR = registerBlock("adamantium_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON,
+                    BlockBehaviour.Properties.of()
+                            .strength(50f, 1200f)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
 
     // Advanced
 //    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock(

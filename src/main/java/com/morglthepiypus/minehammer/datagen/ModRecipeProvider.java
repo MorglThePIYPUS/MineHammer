@@ -82,6 +82,33 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 0.5f,
                 150,
                 "adamantium");
+
+        stairBuilder(ModBlocks.ADAMANTIUM_STAIRS.get(), Ingredient.of(ModItems.ADAMANTIUM_INGOT.get()))
+                .group("adamantium").unlockedBy(getHasName(ModItems.ADAMANTIUM_INGOT.get()),
+                        has(ModItems.ADAMANTIUM_INGOT.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ADAMANTIUM_SLAB.get(),
+                ModItems.ADAMANTIUM_INGOT.get());
+
+        buttonBuilder(ModBlocks.ADAMANTIUM_BUTTON.get(), Ingredient.of(ModItems.ADAMANTIUM_INGOT.get()))
+                .group("adamantium").unlockedBy(getHasName(ModItems.ADAMANTIUM_INGOT.get()),
+                        has(ModItems.ADAMANTIUM_INGOT.get())).save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.ADAMANTIUM_PRESSURE_PLATE.get(), ModItems.ADAMANTIUM_INGOT.get());
+
+        fenceBuilder(ModBlocks.ADAMANTIUM_FENCE.get(), Ingredient.of(ModItems.ADAMANTIUM_INGOT.get()))
+                .group("adamantium").unlockedBy(getHasName(ModItems.ADAMANTIUM_INGOT.get()),
+                        has(ModItems.ADAMANTIUM_INGOT.get())).save(pRecipeOutput);
+        fenceGateBuilder(ModBlocks.ADAMANTIUM_FENCE_GATE.get(), Ingredient.of(ModItems.ADAMANTIUM_INGOT.get()))
+                .group("adamantium").unlockedBy(getHasName(ModItems.ADAMANTIUM_INGOT.get()),
+                        has(ModItems.ADAMANTIUM_INGOT.get())).save(pRecipeOutput);
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ADAMANTIUM_WALL.get(),
+                ModItems.ADAMANTIUM_INGOT.get());
+
+        doorBuilder(ModBlocks.ADAMANTIUM_DOOR.get(), Ingredient.of(ModItems.ADAMANTIUM_INGOT.get()))
+                .group("adamantium").unlockedBy(getHasName(ModItems.ADAMANTIUM_INGOT.get()),
+                        has(ModItems.ADAMANTIUM_INGOT.get())).save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.ADAMANTIUM_TRAPDOOR.get(), Ingredient.of(ModItems.ADAMANTIUM_INGOT.get()))
+                .group("adamantium").unlockedBy(getHasName(ModItems.ADAMANTIUM_INGOT.get()),
+                        has(ModItems.ADAMANTIUM_INGOT.get())).save(pRecipeOutput);
     }
 
     protected static void nineBlockStorageRecipes(

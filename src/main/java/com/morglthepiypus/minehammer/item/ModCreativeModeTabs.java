@@ -51,6 +51,18 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RAW_ADAMANTIUM_BLOCK.get());
                         output.accept(ModBlocks.ADAMANTIUM_BLOCK.get());
 
+                        output.accept(ModBlocks.ADAMANTIUM_STAIRS.get());
+                        output.accept(ModBlocks.ADAMANTIUM_SLAB.get());
+
+                        output.accept(ModBlocks.ADAMANTIUM_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.ADAMANTIUM_BUTTON.get());
+
+                        output.accept(ModBlocks.ADAMANTIUM_FENCE.get());
+                        output.accept(ModBlocks.ADAMANTIUM_FENCE_GATE.get());
+                        output.accept(ModBlocks.ADAMANTIUM_WALL.get());
+
+                        output.accept(ModBlocks.ADAMANTIUM_DOOR.get());
+                        output.accept(ModBlocks.ADAMANTIUM_TRAPDOOR.get());
                         //output.accept(ModBlocks.MAGIC_BLOCK.get());
                     })
                     .build());

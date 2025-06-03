@@ -19,5 +19,14 @@
   "block.minehammer.raw_adamantium_block": "Block of Raw Adamantium",
   "block.minehammer.adamantium_block": "Adamantium Block",
   "block.minehammer.magic_block": "Magic Block",
-  "tooltip.minehammer.magic_block.tooltip": "This block is a §eplaceholder§r"
+  "tooltip.minehammer.magic_block.tooltip": "This block is a §eplaceholder§r",
+  "block.minehammer.adamantium_stairs": "Adamantium Stairs",
+  "block.minehammer.adamantium_slab": "Adamantium Slab",
+  "block.minehammer.adamantium_button": "Adamantium Button",
+  "block.minehammer.adamantium_pressure_plate": "Adamantium Pressure Plate",
+  "block.minehammer.adamantium_fence": "Adamantium Fence",
+  "block.minehammer.adamantium_fence_gate": "Adamantium Fence Gate",
+  "block.minehammer.adamantium_wall": "Adamantium Wall",
+  "block.minehammer.adamantium_door": "Adamantium Door",
+  "block.minehammer.adamantium_trapdoor": "Adamantium Trapdoor"
 }

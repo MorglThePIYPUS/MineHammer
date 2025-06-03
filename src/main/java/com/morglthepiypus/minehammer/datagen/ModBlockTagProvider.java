@@ -34,5 +34,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                .add(ModBlocks.DEEPSLATE_ADAMANTIUM_ORE.get())
                .add(ModBlocks.RAW_ADAMANTIUM_BLOCK.get())
                .add(ModBlocks.ADAMANTIUM_BLOCK.get());
+
+       tag(BlockTags.FENCES).add(ModBlocks.ADAMANTIUM_FENCE.get());
+
+       tag(BlockTags.FENCE_GATES).add(ModBlocks.ADAMANTIUM_FENCE_GATE.get());
+
+       tag(BlockTags.WALLS).add(ModBlocks.ADAMANTIUM_WALL.get());
     }
 }
