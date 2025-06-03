@@ -64,6 +64,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ADAMANTIUM_DOOR.get());
                         output.accept(ModBlocks.ADAMANTIUM_TRAPDOOR.get());
                         //output.accept(ModBlocks.MAGIC_BLOCK.get());
+                        output.accept(ModBlocks.IMPERIUM_LAMP.get());
                     })
                     .build());
 

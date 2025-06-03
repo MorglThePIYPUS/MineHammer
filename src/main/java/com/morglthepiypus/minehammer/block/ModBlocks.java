@@ -2,7 +2,6 @@ package com.morglthepiypus.minehammer.block;
 
 import com.morglthepiypus.minehammer.MineHammer;
 import com.morglthepiypus.minehammer.block.custom.ImperiumLampBlock;
-import com.morglthepiypus.minehammer.block.custom.MagicBlock;
 import com.morglthepiypus.minehammer.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -97,6 +96,9 @@ public class ModBlocks {
 //    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock(
 //            "magic_block",
 //            () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).noLootTable()));
+    public static final RegistryObject<Block> IMPERIUM_LAMP = registerBlock("imperium_lamp",
+            () -> new ImperiumLampBlock(BlockBehaviour.Properties.of().strength(3f)
+                    .lightLevel(state -> state.getValue(ImperiumLampBlock.IS_CLICKED) ? 15 : 0)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

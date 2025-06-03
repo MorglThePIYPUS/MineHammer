@@ -59,6 +59,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.ADAMANTIUM_DOOR.get(),
                 block -> createDoorTable(ModBlocks.ADAMANTIUM_DOOR.get()));
         dropSelf(ModBlocks.ADAMANTIUM_TRAPDOOR.get());
+
+        dropSelf(ModBlocks.IMPERIUM_LAMP.get());
     }
 
     protected LootTable.Builder createMultipleDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

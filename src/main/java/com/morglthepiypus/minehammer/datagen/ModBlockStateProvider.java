@@ -2,9 +2,12 @@ package com.morglthepiypus.minehammer.datagen;
 
 import com.morglthepiypus.minehammer.MineHammer;
 import com.morglthepiypus.minehammer.block.ModBlocks;
+import com.morglthepiypus.minehammer.block.custom.ImperiumLampBlock;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -46,6 +49,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.ADAMANTIUM_PRESSURE_PLATE);
         blockItem(ModBlocks.ADAMANTIUM_FENCE_GATE);
         blockItem(ModBlocks.ADAMANTIUM_TRAPDOOR, "_bottom");
+
+        customLamp();
+    }
+
+    // TO DO -> GENERALIZE THIS CODE
+    private void customLamp() {
+        getVariantBuilder(ModBlocks.IMPERIUM_LAMP.get()).forAllStates(state -> {
+            if(state.getValue(ImperiumLampBlock.IS_CLICKED)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("imperium_lamp_on",
+                        ResourceLocation.fromNamespaceAndPath(MineHammer.MOD_ID, "block/" + "imperium_lamp_on")))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("imperium_lamp_off",
+                        ResourceLocation.fromNamespaceAndPath(MineHammer.MOD_ID, "block/" + "imperium_lamp_off")))};
+            }
+        });
+        simpleBlockItem(ModBlocks.IMPERIUM_LAMP.get(), models().cubeAll("imperium_lamp_on",
+                ResourceLocation.fromNamespaceAndPath(MineHammer.MOD_ID, "block/" + "imperium_lamp_on")));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
